@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #0a66c2;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+.contact a {
+    color: white;
+    margin: 5px 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+section {
+    max-width: 900px;
+    margin: 25px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+h2 {
+    border-bottom: 2px solid #0a66c2;
+    padding-bottom: 5px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.card {
+    background: #eef3f8;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+footer {
+    background: #0a66c2;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
