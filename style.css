@@ -1,7 +1,10 @@
+/* =========================
+   GLOBAL + UNIVERSE BACKGROUND
+   ========================= */
 body {
     font-family: "Segoe UI", Arial, sans-serif;
     margin: 0;
-    color: #333;
+    color: #222;
     line-height: 1.6;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     overflow-x: hidden;
@@ -16,37 +19,138 @@ body::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background-repeat: repeat;
     pointer-events: none;
     z-index: -1;
 }
 
 body::before {
-    background-image: radial-gradient(1px 1px at 20px 30px, white, transparent),
-                      radial-gradient(1px 1px at 40px 70px, white, transparent),
-                      radial-gradient(1px 1px at 90px 40px, white, transparent),
-                      radial-gradient(1px 1px at 130px 80px, white, transparent),
-                      radial-gradient(1px 1px at 160px 120px, white, transparent);
-    background-size: 200px 200px;
-    animation: starsMove 120s linear infinite;
+    background-image:
+        radial-gradient(1px 1px at 20px 30px, white, transparent),
+        radial-gradient(1px 1px at 80px 120px, white, transparent),
+        radial-gradient(1px 1px at 150px 60px, white, transparent),
+        radial-gradient(1px 1px at 220px 180px, white, transparent),
+        radial-gradient(1px 1px at 300px 90px, white, transparent);
+    background-size: 250px 250px;
+    animation: starsMove 140s linear infinite;
     opacity: 0.6;
 }
 
 body::after {
-    background-image: radial-gradient(2px 2px at 50px 50px, white, transparent),
-                      radial-gradient(2px 2px at 150px 150px, white, transparent),
-                      radial-gradient(2px 2px at 250px 250px, white, transparent);
-    background-size: 300px 300px;
-    animation: starsMove 200s linear infinite;
+    background-image:
+        radial-gradient(2px 2px at 50px 50px, white, transparent),
+        radial-gradient(2px 2px at 200px 200px, white, transparent),
+        radial-gradient(2px 2px at 350px 120px, white, transparent);
+    background-size: 400px 400px;
+    animation: starsMove 220s linear infinite;
     opacity: 0.3;
 }
 
-/* ---------- STAR ANIMATION ---------- */
 @keyframes starsMove {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-1000px);
-    }
+    from { transform: translateY(0); }
+    to { transform: translateY(-1200px); }
+}
+
+/* =========================
+   HEADER
+   ========================= */
+header {
+    background: rgba(10, 102, 194, 0.9);
+    backdrop-filter: blur(8px);
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    margin-bottom: 8px;
+    font-size: 2.3rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+/* ---------- CONTACT LINKS ---------- */
+.contact a {
+    color: #ffffff;
+    margin: 10px 14px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.25s, opacity 0.25s;
+}
+
+.contact a:hover {
+    transform: scale(1.08);
+    opacity: 0.85;
+}
+
+/* =========================
+   CONTENT SECTIONS (HIGHLIGHTED)
+   ========================= */
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.97);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow:
+        0 0 25px rgba(0, 180, 255, 0.25),
+        0 18px 45px rgba(0, 0, 0, 0.45);
+}
+
+/* ---------- HEADINGS ---------- */
+h2 {
+    color: #0a66c2;
+    border-left: 6px solid #0a66c2;
+    padding-left: 14px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* ---------- TEXT ---------- */
+p {
+    font-size: 1.05rem;
+    color: #222;
+}
+
+ul {
+    padding-left: 22px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #222;
+}
+
+/* =========================
+   PROJECT CARD
+   ========================= */
+.card {
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    padding: 22px;
+    border-radius: 14px;
+    border-left: 6px solid #0a66c2;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+footer {
+    text-align: center;
+    padding: 18px;
+    background: rgba(0, 0, 0, 0.35);
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 50px;
 }
