@@ -165,11 +165,13 @@ ul li {
    FOOTER
    ========================= */
 footer {
-  background: transparent;   /* KEY CHANGE */
+  background: rgba(255, 255, 255, 0.15); /* dark white */
   color: #ffffff;
   text-align: center;
-  padding: 30px 10px;
-  margin-top: 50px;
+  padding: 25px 10px;
+  margin-top: 60px;
+  backdrop-filter: blur(6px);
+  border-top: 1px solid rgba(255,255,255,0.25);
   position: relative;
   z-index: 1;
 }
@@ -189,7 +191,7 @@ footer {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 .hero {
-  padding: 60px 20px;
+  padding: 70px 20px 40px;
   text-align: center;
   background: transparent; /* IMPORTANT */
   position: relative;
@@ -207,7 +209,7 @@ footer {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 50%; /* 👈 moves face DOWN */
+  object-position: center 45%; /* 👈 moves face DOWN */
   border: 4px solid #ffffff;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
   background-color: #000;
