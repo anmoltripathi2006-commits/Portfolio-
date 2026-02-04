@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Anmol Tripathi | Portfolio</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -10,107 +10,96 @@
 </head>
 <body>
 
-<div class="container">
+<!-- NAVBAR -->
+<nav class="glass nav">
+  <h2 class="logo">Portfolio.</h2>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button id="themeToggle" class="toggle">🌙</button>
+</nav>
 
-  <!-- PROFILE -->
-  <header class="profile glass">
-    <img src="profile.jpg" alt="Profile">
+<!-- HERO -->
+<section id="home" class="hero glass reveal">
+  <div class="hero-text">
+    <h3>Hello, It’s Me</h3>
     <h1>Anmol Tripathi</h1>
-    <p>Entry-Level Software Developer | BCA Student</p>
+    <h2>And I’m an <span>Entry-Level Software Developer</span></h2>
 
-    <div class="contact-row">
-      <span>📞 9193162706</span>
-      <span>📱 9997549059</span>
-      <span>✉ anmoltripathi2006@gmail.com</span>
-      <a href="#" target="_blank">🔗 LinkedIn</a>
-    </div>
-
-    <!-- RESUME BUTTON -->
-    <a href="resume.pdf" download class="btn">📄 Download Resume</a>
-  </header>
-
-  <!-- ABOUT -->
-  <section class="glass">
-    <h2>About Me</h2>
     <p>
-      Entry-level Software Developer with a strong foundation in Java, Python, PHP,
-      and Web Technologies. Currently pursuing Bachelor of Computer Applications (BCA)
-      and eager to apply programming, problem-solving, and data structure skills in
-      real-world projects.
+      Associate Software Developer with hands-on experience in building
+      responsive web applications and logic-based software projects.
+      Proficient in Python, Java, PHP, JavaScript, HTML, CSS, and SQL.
     </p>
-  </section>
 
-  <!-- TECHNICAL SKILLS -->
-  <section class="glass">
-    <h2>Technical Skills</h2>
-    <ul>
-      <li><b>Programming:</b> Java, Python, C, PHP, VB.NET</li>
-      <li><b>Web:</b> HTML, CSS, JavaScript</li>
-      <li><b>Database:</b> MySQL</li>
-      <li><b>Concepts:</b> Data Structures & Algorithms</li>
-    </ul>
-  </section>
+    <a href="resume.pdf" download class="btn">Download Resume</a>
+  </div>
 
-  <!-- SOFT SKILLS -->
-  <section class="glass">
-    <h2>Soft Skills</h2>
-    <div class="skill-box">Communication Skills</div>
-    <div class="skill-box">Problem-Solving Ability</div>
-    <div class="skill-box">Teamwork & Collaboration</div>
-    <div class="skill-box">Adaptability & Willingness to Learn</div>
-    <div class="skill-box">Time Management</div>
-  </section>
+  <div class="hero-img">
+    <img src="profile.jpg" alt="Anmol Tripathi">
+  </div>
+</section>
 
-  <!-- PROJECT -->
-  <section class="glass">
-    <h2>Project</h2>
-    <h3>Responsive Portfolio Website</h3>
-    <p>
-      Designed and developed a responsive portfolio website using HTML, CSS, and
-      JavaScript with clean UI and mobile compatibility.
-    </p>
-  </section>
+<!-- ABOUT -->
+<section id="about" class="glass section reveal">
+  <h2>About Me</h2>
+  <p>
+    Entry-level Software Developer with a strong foundation in Java, Python, PHP,
+    and Web Technologies. Currently pursuing BCA and eager to apply
+    problem-solving and development skills in real-world projects.
+  </p>
+</section>
 
-  <!-- EDUCATION -->
-  <section class="glass">
-    <h2>Education</h2>
-    <ul>
-      <li>BCA (2023–2026) – Dr. Bhimrao Ambedkar University, Agra</li>
-      <li>ADCA (2022) – 85.66%</li>
-      <li>HSC (2023) – 68.4%</li>
-      <li>SSC (2021) – 87.4%</li>
-    </ul>
-  </section>
+<!-- SKILLS -->
+<section id="skills" class="glass section reveal">
+  <h2>Technical Skills</h2>
+  <ul>
+    <li><b>Programming:</b> Python, Java (Basic), C, PHP</li>
+    <li><b>Web:</b> HTML, CSS, JavaScript</li>
+    <li><b>Database:</b> MySQL, DBMS</li>
+    <li><b>Tools:</b> GitHub, Visual Studio</li>
+  </ul>
+</section>
 
-  <!-- CERTIFICATIONS -->
-  <section class="glass">
-    <h2>Certifications</h2>
-    <ul>
-      <li>IIT Bombay – Spoken Tutorial (Python, Java, C, HTML, PHP & MySQL)</li>
-      <li>Cybersecurity Job Simulation – Deloitte (Forage)</li>
-      <li>Technology Job Simulation – Deloitte (Forage)</li>
-      <li>CCC – NIELIT Approved</li>
-      <li>English Typing – Certified</li>
-      <li>PMO Certification (PPC23) – Government of India</li>
-    </ul>
-  </section>
+<!-- PROJECTS -->
+<section id="projects" class="glass section reveal">
+  <h2>Projects</h2>
+  <ul>
+    <li><b>My Tour – Online Ticket Booking Website</b></li>
+    <li>Responsive Resume Website</li>
+    <li>Tic Tac Toe Game</li>
+    <li>To-Do List Application</li>
+    <li>Login & Registration System</li>
+    <li>Online Quiz Application</li>
+    <li>Number Guessing Game</li>
+    <li>Calculator Application</li>
+  </ul>
+</section>
 
-  <!-- CONTACT -->
-  <section class="glass">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </section>
+<!-- CONTACT -->
+<section id="contact" class="glass section reveal">
+  <h2>Contact Me</h2>
 
-  <footer>
-    © 2025 Anmol Tripathi | Portfolio Website
-  </footer>
+  <form id="contactForm">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button class="btn" type="submit">Send Message</button>
+  </form>
 
-</div>
+  <p class="contact-info">
+    📞 9193162706 | 📱 9997549059 <br>
+    ✉ anmoltripathi2006@gmail.com
+  </p>
+</section>
+
+<footer>
+  © 2025 Anmol Tripathi | Portfolio Website
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script src="script.js"></script>
