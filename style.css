@@ -4,7 +4,22 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+/* ===== STAR CANVAS BACKGROUND ===== */
+#star-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: radial-gradient(circle at top, #0b1023, #000);
+}
 
+/* Prevent scrollbars caused by canvas */
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
 body {
   background: #000;
   color: #eaeaea;
