@@ -1,91 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Anmol Tripathi | Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <title>Anmol Tripathi | BCA Student & Software Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<canvas id="bgCanvas"></canvas>
+<canvas id="stars"></canvas>
 
-<header class="navbar">
-  <h2>Anmol</h2>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#connect">Connect</a>
-  </nav>
-</header>
-
-<section id="home" class="hero glass">
-  <div>
-    <h1>Hello, I'm <span>Anmol Tripathi</span></h1>
-    <p>Entry-Level Software Developer passionate about building real-world applications.</p>
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <img src="images/profile.jpg" class="profile-img" alt="Anmol Tripathi">
+    <h1>Hello, I’m <span>Anmol Tripathi</span></h1>
+    <p>BCA Student | Software Developer</p>
   </div>
-  <img src="images/profile.jpg" class="hero-img"/>
 </section>
 
-<section id="skills" class="glass">
+<!-- SKILLS -->
+<section id="skills">
   <h2>Technical Skills</h2>
-  <div class="skill-grid">
-    <div><img src="images/icons/html.png"><p>HTML</p></div>
-    <div><img src="images/icons/css.png"><p>CSS</p></div>
-    <div><img src="images/icons/js.png"><p>JavaScript</p></div>
-    <div><img src="images/icons/node.png"><p>Node.js</p></div>
-    <div><img src="images/icons/mongo.png"><p>MongoDB</p></div>
+
+  <div class="skills-grid">
+    <div><img src="images/html.png"><span>HTML</span></div>
+    <div><img src="images/css.png"><span>CSS</span></div>
+    <div><img src="images/js.png"><span>JavaScript</span></div>
+    <div><img src="images/node.png"><span>Node.js</span></div>
+    <div><img src="images/mongodb.png"><span>MongoDB</span></div>
   </div>
 </section>
 
-<section id="projects" class="glass">
+<!-- PROJECTS -->
+<section id="projects">
   <h2>Projects</h2>
 
-  <div class="project-card">
-    <img src="images/project1.png">
+  <div class="project">
+    <img src="images/mytour.jpg">
     <div>
-      <h3>My Tour – Online Ticket Booking Website</h3>
+      <h3>My Tour – Online Ticket Booking Website (Major Project)</h3>
       <p>
-        Full-stack tour booking system built using HTML, CSS, JavaScript,
-        Node.js, Express.js, and MongoDB. Features booking workflow,
-        dynamic data handling, and user-friendly UI.
+        A full-stack online tour & ticket booking system built using
+        HTML, CSS, JavaScript for frontend and Node.js, Express.js with MongoDB
+        for backend. Includes booking workflow, dynamic data handling and
+        user-friendly UI.
       </p>
+      <p><strong>Tech:</strong> HTML, CSS, JavaScript, Node.js, Express, MongoDB</p>
     </div>
   </div>
 
-  <div class="project-card">
-    <img src="images/project2.png">
+  <div class="project">
+    <img src="images/todo.jpg">
     <div>
       <h3>To-Do List Application</h3>
       <p>
-        Task management application with CRUD operations using JavaScript.
-        Allows adding, editing, deleting, and saving tasks.
+        Task management web app allowing users to add, edit, delete and save tasks
+        with CRUD operations using JavaScript.
       </p>
+      <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
     </div>
   </div>
 
-  <div class="project-card">
-    <img src="images/project3.png">
+  <div class="project">
+    <img src="images/quiz.jpg">
     <div>
-      <h3>Online Quiz & Number Guessing Game</h3>
+      <h3>Online Quiz Game</h3>
       <p>
-        Logic-based interactive games built using JavaScript with
-        score calculation and real-time feedback.
+        MCQ-based quiz game with score calculation and result display in real time.
       </p>
+      <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
     </div>
   </div>
+
+  <div class="project">
+    <img src="images/number.jpg">
+    <div>
+      <h3>Number Guessing Game</h3>
+      <p>
+        Logic-based JavaScript game where users guess numbers with feedback and scoring.
+      </p>
+      <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+    </div>
+  </div>
+
+  <div class="project">
+    <img src="images/tictactoe.jpg">
+    <div>
+      <h3>Tic Tac Toe Game</h3>
+      <p>
+        Two-player interactive Tic Tac Toe game with win and draw logic.
+      </p>
+      <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+    </div>
+  </div>
+
+  <div class="project">
+    <img src="images/calculator.jpg">
+    <div>
+      <h3>Calculator Application</h3>
+      <p>
+        Web-based calculator performing basic arithmetic operations.
+      </p>
+      <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+    </div>
+  </div>
+
 </section>
 
-<section id="connect" class="glass connect-card">
-  <img src="images/profile.jpg" class="profile-pic">
-  <div>
-    <h3>Anmol Tripathi</h3>
-    <p>BCA Student | Software Developer</p>
-    <div class="social-links">
-      <a href="https://linkedin.com/in/YOUR_LINK" target="_blank">LinkedIn</a>
-      <a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub</a>
-    </div>
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+
+  <form id="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div class="socials">
+    <a href="https://www.linkedin.com/in/your-link" target="_blank">LinkedIn</a>
+    <a href="https://github.com/your-github" target="_blank">GitHub</a>
   </div>
 </section>
 
