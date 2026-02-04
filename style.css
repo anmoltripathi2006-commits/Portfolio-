@@ -45,45 +45,116 @@ section {
 }
 
 .profile-img {
-  width: 150px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
+  width: 160px;          /* SAME width & height */
+  height: 160px;
+  border-radius: 50%;    /* makes it circle */
+  object-fit: cover;    /* crops image properly */
+  display: block;
+  margin: 0 auto 20px;
 
+  /* optional glow (looks premium) */
+  border: 3px solid rgba(0, 229, 255, 0.8);
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.6);
+}
 .hero h1 span {
   color: #00e5ff;
 }
 
-/* SKILLS */
-.skills-grid {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.skills-grid div {
+/* ===== SKILLS SECTION ===== */
+#skills {
   text-align: center;
+  padding: 80px 5vw;
 }
 
-.skills-grid img {
-  width: 60px;
-  margin-bottom: 10px;
+.skills-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+/* Each skill */
+.skill-item {
+  display: flex;
+  flex-direction: column;   /* TEXT BELOW IMAGE */
+  align-items: center;
+  gap: 14px;
+  transition: transform 0.3s ease;
+}
+
+/* Skill icons (INCREASED SIZE) */
+.skill-item img {
+  width: 95px;              /* 🔥 increased */
+  height: 95px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 15px rgba(0, 229, 255, 0.45));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Skill text */
+.skill-item span {
+  font-size: 1.15rem;       /* 🔥 increased */
+  font-weight: 600;
+  color: #e6f1ff;
+  letter-spacing: 0.5px;
+}
+
+/* Hover animation */
+.skill-item:hover {
+  transform: translateY(-8px);
+}
+
+.skill-item:hover img {
+  transform: scale(1.12);
+  filter: drop-shadow(0 0 22px rgba(0, 229, 255, 0.8));
 }
 
 /* PROJECTS */
-.project {
+/* ===== PROJECTS SECTION ===== */
+.project-item {
   display: flex;
-  gap: 30px;
-  margin-bottom: 60px;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 35px;
 }
 
-.project img {
-  width: 320px;
-  border-radius: 10px;
+/* Project image size reduced */
+.project-item img {
+  width: 130px;          /* 🔥 reduced */
+  height: 130px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.35);
+  flex-shrink: 0;
 }
 
+/* Text container */
+.project-content {
+  max-width: 600px;
+}
+
+/* Title */
+.project-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: #e6f1ff;
+}
+
+/* Description */
+.project-content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin-bottom: 6px;
+}
+
+/* Tech stack */
+.project-content .tech {
+  font-size: 0.85rem;
+  color: #7dd3fc;
+}
 /* CONTACT */
 #contact form {
   max-width: 400px;
@@ -122,4 +193,18 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 14px;
+}
+@media (max-width: 768px) {
+  .skill-item img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .skill-item span {
+    font-size: 1rem;
+  }
+
+  .skills-row {
+    gap: 30px;
+  }
 }
