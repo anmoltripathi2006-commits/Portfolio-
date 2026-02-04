@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  emailjs.init("HK8St7m_nWNHMHe1Q"); // your PUBLIC KEY
+  emailjs.init({
+    publicKey: "HK8St7m_nWNHMHe1Q"
+  });
 
   const form = document.getElementById("contact-form");
 
@@ -8,15 +10,15 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
 
     emailjs.sendForm(
-      "service_xgul5s7",     // your SERVICE ID
-      "template_whk7z0s",    // your TEMPLATE ID
+      "service_xgul5s7",
+      "template_whk7z0s",
       this
     )
-    .then(function () {
+    .then(() => {
       alert("Message sent successfully!");
       form.reset();
     })
-    .catch(function (error) {
+    .catch((error) => {
       console.error("EmailJS Error:", error);
       alert("Failed to send message.");
     });
