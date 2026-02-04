@@ -373,3 +373,56 @@ body::after {
     opacity: 0;
   }
 }
+/* ================= EXTRA STAR DENSITY (NO HTML CHANGE) ================= */
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Small stars */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(1px 1px at 10% 20%, #fff, transparent),
+    radial-gradient(1px 1px at 30% 80%, #fff, transparent),
+    radial-gradient(1px 1px at 50% 40%, #fff, transparent),
+    radial-gradient(1px 1px at 70% 10%, #fff, transparent),
+    radial-gradient(1px 1px at 90% 60%, #fff, transparent),
+    radial-gradient(1px 1px at 15% 55%, #fff, transparent),
+    radial-gradient(1px 1px at 85% 25%, #fff, transparent);
+  background-size: 200px 200px;
+  animation: twinkleStars 6s infinite alternate;
+  opacity: 0.8;
+}
+
+/* Medium stars */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(2px 2px at 20% 30%, #fff, transparent),
+    radial-gradient(2px 2px at 40% 70%, #fff, transparent),
+    radial-gradient(2px 2px at 60% 20%, #fff, transparent),
+    radial-gradient(2px 2px at 80% 50%, #fff, transparent),
+    radial-gradient(2px 2px at 30% 10%, #fff, transparent),
+    radial-gradient(2px 2px at 75% 85%, #fff, transparent);
+  background-size: 350px 350px;
+  animation: twinkleStars 8s infinite alternate;
+  opacity: 0.6;
+}
+
+/* Twinkle animation */
+@keyframes twinkleStars {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
