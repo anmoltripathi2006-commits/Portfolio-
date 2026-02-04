@@ -1,24 +1,22 @@
-document.addEventListener("DOMContentLoaded", function () {
-  emailjs.init("HK85t7m_rVMHmHelQ"); // your PUBLIC key
+emailjs.init("HK85t7m_rVMHmHelQ"); // public key
 
-  const form = document.getElementById("contact-form");
+const form = document.getElementById("contact-form");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-    emailjs.sendForm(
-      "service_xgul5s7",
-      "template_whk7z0s",
-      this
-    ).then(
-      function () {
-        alert("Message sent successfully!");
-        form.reset();
-      },
-      function (error) {
-        console.error("EmailJS Error:", error);
-        alert("Failed to send message. See console.");
-      }
-    );
-  });
+  emailjs.sendForm(
+    "service_xgul5s7",
+    "template_whk7z0s",
+    form
+  ).then(
+    () => {
+      alert("Message sent successfully!");
+      form.reset();
+    },
+    (error) => {
+      console.error("EmailJS Error:", error);
+      alert("Failed to send message. See console.");
+    }
+  );
 });
