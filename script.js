@@ -1,24 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  emailjs.init("HK85t7m_nVNHmHelQ"); // ✅ PUBLIC key only
+  emailjs.init("HK8St7m_nWNHMHe1Q"); // your PUBLIC KEY
 
   const form = document.getElementById("contact-form");
 
   form.addEventListener("submit", function (e) {
-    e.preventDefault(); // ✅ stops URL change
+    e.preventDefault();
 
     emailjs.sendForm(
-      "service_xgul5s7",   // Service ID
-      "template_whk7z0s",  // Template ID
-      form
+      "service_xgul5s7",     // your SERVICE ID
+      "template_whk7z0s",    // your TEMPLATE ID
+      this
     )
-    .then(() => {
+    .then(function () {
       alert("Message sent successfully!");
       form.reset();
     })
-    .catch((error) => {
+    .catch(function (error) {
       console.error("EmailJS Error:", error);
-      alert("Failed to send message. Check console.");
+      alert("Failed to send message.");
     });
   });
 
